@@ -1,0 +1,18 @@
+<%@page language="java" %>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <h2>Sahni Fam</h2>
+        <form action="addAlien">
+            <label for="aid">Enter ID:</label>
+            <input type="text" name="aid" id="aid" />
+            <br />
+            <label for="aname">Enter name:</label>
+            <input type="text" name="aname" id="aname" />
+            <input type="submit" value="submit">
+        </form>
+    </body>
+</html>

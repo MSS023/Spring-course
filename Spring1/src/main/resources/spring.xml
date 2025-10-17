@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+<!--    <bean id="alien" class="com.sahni.Alien" scope="prototype"/>-->
+
+    <bean id="alien" class = "com.sahni.Alien" autowire="byType">
+<!--        <constructor-arg value="21" type="int" name="age"/>-->
+<!--        <constructor-arg ref = "lap" type="com.sahni.Laptop" name="lap"/>-->
+        <property name="com">
+            <bean id="com" class="com.sahni.Laptop" primary="true" lazy-init="false"/>
+        </property>
+        <property name="age" value="21" />
+    </bean>
+
+<!--    <bean id="com" class="com.sahni.Laptop" primary="true" lazy-init="false"/>-->
+<!--    <bean id="com1" class="com.sahni.Desktop" primary="false" lazy-init="true"/>-->
+</beans>
